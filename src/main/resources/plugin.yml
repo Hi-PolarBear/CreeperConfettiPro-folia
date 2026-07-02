@@ -1,0 +1,18 @@
+name: CreeperConfettiPro
+version: '2.1.2-folia'
+main: CreeperConfetti.example.creeperConfettiPro.CreeperConfettiPro
+api-version: '1.21'
+authors: [Nice_Cam_]
+folia-supported: true
+
+commands:
+  creeperconfetti:
+    description: CreeperConfettiPro 主命令 / Main command for CreeperConfettiPro
+    usage: /creeperconfetti <reload | reseteffect | seteffect | reloadlanguage | setlanguage | language>
+    permission: creeperconfetti.command
+    aliases: [cc, confetti]
+
+permissions:
+  creeperconfetti.command:
+    description: 允许使用 CreeperConfettiPro 命令 / Allows using CreeperConfettiPro commands
+    default: op
