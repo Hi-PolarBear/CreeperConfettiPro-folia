@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-import CreeperConfetti.example.creeperConfettiPro.CreeperConfettiPro ;
+import CreeperConfetti.example.creeperConfettiPro.CreeperConfettiPro;
+import io.papermc.paper.threadedregions.scheduler.ScheduledTask;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Location;
 import org.bukkit.Sound;
@@ -59,7 +60,6 @@ public class CreeperExplodeListener implements Listener {
 
         location.getWorld().playSound(location, Sound.ENTITY_GENERIC_EXPLODE, SoundCategory.HOSTILE, 2.0F, 1.0F);
 
-        CreeperConfettiPro.getInstance().getServer().getScheduler()
-                .runTaskLater(CreeperConfettiPro.getInstance(), firework::detonate, 1L);
+        firework.getScheduler().runDelayed(CreeperConfettiPro.getInstance(), (ScheduledTask task) -> firework.detonate(), null, 1);
     }
 }

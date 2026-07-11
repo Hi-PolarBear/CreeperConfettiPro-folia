@@ -1,5 +1,5 @@
 name: CreeperConfettiPro
-version: '2.1.2-folia'
+version: '2.1.2-folia-fix1'
 main: CreeperConfetti.example.creeperConfettiPro.CreeperConfettiPro
 api-version: '1.21'
 authors: [Nice_Cam_]
